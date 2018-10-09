@@ -1,0 +1,50 @@
+PA3 Joel Davidson
+
+Number of requestors:1
+Number of resolvers:1
+Total run time: 11385862
+Thread<233160704> serviced 103 files
+
+Number of requestors:1
+Number of resolvers:3
+Total run time: 5989231
+Thread<48607232> serviced 103 files
+
+Number of requestors:3
+Number of resolvers:1
+Total run time: 7848736
+Thread<109146112> serviced 34 files
+Thread<109682688> serviced 33 files
+Thread<110219264> serviced 36 files
+
+Number of requestors:3
+Number of resolvers:3
+Total run time:5878307
+Thread<69816320> serviced 29 files
+Thread<69279744> serviced 36 files
+Thread<68743168> serviced 38 files
+
+
+Number of requestors:5
+Number of resolvers:5
+Total run time:5615334
+Thread<210538496> serviced 27 files
+Thread<210001920> serviced 17 files
+Thread<211611648> serviced 19 files
+Thread<209465344> serviced 26 files
+Thread<211075072> serviced 14 files
+
+
+Number of requestors:8
+Number of resolvers:5
+Total run time:1265462
+Thread<26345472> serviced 16 files
+Thread<27955200> serviced 16 files
+Thread<29028352> serviced 15 files
+Thread<29564928> serviced 11 files
+Thread<26882048> serviced 15 files
+Thread<27418624> serviced 10 files
+Thread<28491776> serviced 9 files
+Thread<25808896> serviced 11 files
+
+The runtime of my program varied with each run but the average runtime was lower as more resolvers were added. The second time running it in a row with the same number of resolvers and requesters was much faster. I believe this is due to caching. The time will vary because the location that a thread is at in its code when the OS does a switch to another thread is somewhat random. Sometimes it will do a switch when the thread has the other threads locked out which will make it waste time and other times there will be a switch when the thread is not locking any mutex. There are ways to make it run faster with adding more different muteness for specific files etc.
